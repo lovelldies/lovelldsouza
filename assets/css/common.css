@@ -66,12 +66,15 @@ blockquote p {
 
 #nav .dropdown-menu {
   /* background-color: rgba(255, 255, 255, 0); */
-  background-color: #000;
-  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
 }
 #nav .dropdown-menu>li>a:focus,
 #nav .dropdown-menu>li>a:hover {
   background-color: #000;
+}
+#nav .dropdown-divider {
+  border-top: 1px dotted rgba(128, 128, 128, 0.5);
 }
 
 .fill {
@@ -151,7 +154,8 @@ label {
 }
 #nav a:focus,
 #nav a:hover {
-  color: #b7b7b7;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 p {
