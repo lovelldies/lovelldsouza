@@ -1,0 +1,15 @@
+{% if page.tags.size > 0 %}
+{% assign tagslist = page.tags %}
+<div class="container" style="padding-top:50px;padding-bottom:50px;">
+  <div class="row">
+    <div class="col-md-12"></div>
+      <h3>Tags</h3>
+      <p>
+      {% for tag in tagslist %}
+        <a href="{{ site.baseurl}}/tags/#{{ tag | downcase | slugify }}">{{ tag }}</a>, 
+      {% endfor %}
+      </p>
+    </div>
+  </div>
+</div>
+{% endif %}

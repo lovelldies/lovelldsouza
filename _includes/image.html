@@ -1,0 +1,34 @@
+{% capture img_path %}{{ include.loc }}{% endcapture %}
+{% capture img_alt %}{{ include.alt }}{% endcapture %}
+
+{% if include.caption != null %}
+  {% capture img_caption %}{{ include.caption }}{% endcapture %}
+{% else %}
+  {% capture img_caption %}{{ include.alt }}{% endcapture %}
+{% endif %}
+
+{% if include.datasrcset != null %}
+  {% assign data_src = include.datasrcset %}
+{% else %}
+  {% assign data_src = include.loc %}
+{% endif %}
+
+{% if jekyll.environment == 'amp' %}
+  {% if page.imageratio == 'wide' %}
+    {% assign img_ratio = 'width="320" height="180"' %}
+  {% else %}
+    {% assign img_ratio = 'width="1024" height="683"' %}
+  {% endif %}
+<amp-img layout="responsive" {{ img_ratio }}
+  src="{{ img_path }}"
+  srcset="{{ data_src }}"
+  alt="{{ img_alt }}"></amp-img>
+  <small>{{ img_caption }}</small>
+{% else %}
+
+    <img alt="{{ img_alt }}" title="{{ img_alt }}" class="lazyload img-responsive"
+         srcset="{{ site.preloadimage }}" data-sizes="auto"
+         src="{{ img_path }}"
+         data-srcset="{{ data_src }}" />
+
+{% endif %}

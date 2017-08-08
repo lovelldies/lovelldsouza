@@ -1,0 +1,58 @@
+---
+layout: post
+categories: webdev
+
+title: Using Flickr for Photo Proofing
+
+image:
+  main: https://farm6.staticflickr.com/5487/9340823829_12e5e53811.jpg
+  datasrcset: 'https://farm6.staticflickr.com/5487/9340823829_12e5e53811_n.jpg 320w, https://farm6.staticflickr.com/5487/9340823829_12e5e53811.jpg 500w, https://farm6.staticflickr.com/5487/9340823829_12e5e53811_z.jpg 640w, https://farm6.staticflickr.com/5487/9340823829_12e5e53811_c.jpg 800w, https://farm6.staticflickr.com/5487/9340823829_12e5e53811_b.jpg 1024w, https://farm6.staticflickr.com/5487/9340823829_6d4dfe6d7a_h.jpg 1600w'
+
+excerpt: I wanted to make something that can be used for free and makes use of Flickr's great API. So here goes.
+tags: [ Flickr, Flickr API, Photos, Proofing ]
+
+date: 2013-07-22T19:23:43+00:00
+modified: 2014-03-22T23:54:51+00:00
+---
+
+<div class="container" id="webdev">
+  <section class="row post">
+    <div class="col-lg-12">
+      <h1>{{ page.title }}</h1>
+      <p>I’ve searched the mighty interwebs but could not find anyone who has made something like this (using Flickr’s API) before. Yes there are a ton of proofing softwares out there, but I wanted to make something that can be used for free and makes use of Flickr’s great API. So here goes.</p>
+      <a target="_blank" href="http://www.flickr.com/photos/lovelldies/4925562935/" title="The Monsoon by Lovell D'souza, on Flickr"><img class="img-polaroid" src="http://farm5.staticflickr.com/4143/4925562935_4b91e14e1e_b.jpg" width="1000" height="538" alt="The Monsoon"></a>
+      <p>I was relaxing in the cab on my way home from work, watching the rain drops hit the window while we crawled through traffic and then it suddenly hit me! Why not use <a href="http://www.flickr.com/" title="Flickr!" target="_blank">Flickr</a> to do photo proofing? Okay, maybe somewhere in Flickr’s terms and conditions there may be a clause stating that you cannot use <a href="http://www.flickr.com/services/api/" title="Flickr API on Flickr!" target="_blank">Flickr’s API</a> for commercial purposes. But lets face the truth, I’ve not read the whole T&amp;C document and I signed up for using their API nevertheless. Why? Because it is awesome! Flickr folks, if you ever land up here please don’t sue me.</p>
+      <p>I’ve made a post before on how you can easily <a href="http://www.lovelldsouza.com/webdev/flickr-to-website/" target="_blank" title="Display Flickr photos on your website">display public photos from a Flickr set onto your website</a> without having to keep copying the embedding code for each and every photo. So please hit that link up and give it a try.</p>
+      <p>Okay, back to this post. After having shot a lot of <a href="http://www.lovelldsouza.com/weddings/" title="Weddings by Lovell D'souza" target="_blank">weddings</a> over the past few years, the most tedious task was getting the proofing of photos done. I would upload them on Picasa Web/Google+ and ask them to ‘Like’ the ones they want and leave comments if required. Now all this was great, but then I never really explored the <a href="https://developers.google.com/picasa-web/" title="Picasa Web Albums API" target="_blank">Picasa Web Albums API</a> and I prefer Flickr’s API. Also, once the clients were done selecting, I would need to keep track of which photographs were liked and which were not. Which was crazy in itself and not the best workflow I guess.</p>
+      <p>Also Google+’s spam filters suddenly decided that the same user hitting +1 in an album of some 500 or so photographs is suspicious and hence would drop +1’s of certain photographs. I’ve not noticed a pattern but I’ve had a lot of clients complain that their +1’s (and comments) have disappeared. Which made me rethink the whole proofing workflow.</p>
+      <p>Flickr to the rescue! The who new display of photos in a set on Flickr now is just brilliant!</p>
+      <a target="_blank" href="http://www.flickr.com/photos/lovelldies/9340823829/" title="Proofing by Lovell D'souza, on Flickr"><img class="img-polaroid" src="http://farm6.staticflickr.com/5487/9340823829_12e5e53811_b.jpg" alt="Proofing"></a>
+      <a href="http://farm6.staticflickr.com/5487/9340823829_f426ab25c9_o.png" target="_blank" data-rel="lightbox-0" title="">Click here</a> to view a larger version of this screenshot.
+      <p>This new interface allows you to star/favorite and comment on photographs without even having to open the photo in a new page. Which I think is really great as the client can compare photos without have to cycle between tabs/windows. All these actions are available on the bottom right corner of each photograph.</p>
+      <p>Now you may be wondering, what happens once the clients are done selecting the photos. Wouldn’t one have to go through the whole set again checking which photos have been starred and which ones have not? Well yes, that would be the case if you open up the set in Flickr. But here is where I plan to make a nice custom interface where you and you client can view the selected photos along with comments that might have been left. Flickr’s API will make this possible as getting images photos from a set are easy. All I’ll need to do is check which ones have been starred and display them accordingly. Which would save everyone a lot of trouble.</p>
+      <p>Two solutions are possible here, use the API and build a custom interface where the client can keep track of what’s going on, or use the existing interface that Flickr has for its sets. For now, I’ll stick to the sets as building a custom interface would take a lot of effort. But making the interface for the clients and me/you to view the selected one would be less trouble. <del datetime="2014-03-22T17:45:44+00:00">I shall work on that now and update this blog post in a few weeks from now</del>. Please leave your ideas/suggestion in the comments. I’m open to feedback.</p><hr>
+      <div class="well well-small center">Screen shot above is from<a href="http://www.lovelldsouza.com/weddings/abigail-tushar-goa/" title="Abigail and Tushar - Wedding in Goa" target="_blank"> Abigail and Tushar’s wedding in Goa</a>.</div><hr>
+      <h2>Update</h2>
+      <p>Quick update (Mar 22, 2014). I’ve got a page setup here: <a href="http://sandbox.lovelldsouza.com/fetch-flickr-starred-photos" title="Fetch starred/favorited photos by a given Flickr user" target="_blank">Fetch starred/favorited photos by a given Flickr user</a>. The script allows you to fetch the photos starred/favorited by a Flickr user.</p>
+      <p>Since I haven’t set up any authentication right now, you will have to log into your Flickr account and use the <a href="http://www.flickr.com/services/api/explore/flickr.favorites.getList" target="_blank:">flickr.favorites.getList</a> function (screenshot below) to get the JSONP response. Below is a screenshot and instructions on what to do.</p>
+      <img class="img-polaroid" style="float:right;margin:0 15px;" src="https://farm8.staticflickr.com/7414/13333735815_4ec79eef22_o.png" alt="Flickr Favorites getList">
+      <div><p>Here is what you need to take care of.</p>
+      <ol>
+        <li><strong>user_id</strong>: use idGettr to find out a user’s id.</li>
+        <li><strong>per_page</strong>: Number of photos that you want to display at a time.</li>
+        <li><strong>Output</strong>: Make sure to select JSONP.</li>
+        <li>Sign call as <strong>YOURSELF</strong> with full permissions</li>
+        <li><strong>Call Method…</strong>: Hit this button to see get the response.</li>
+      </ol>
+      <p>Once done, you should see the response in the textarea below. Make sure you get a status saying okay (<strong>“stat”: “ok”</strong>), which you will notice right at the end of the response. Now just copy the entire thing and paste it <a href="http://sandbox.lovelldsouza.com/fetch-flickr-starred-photos" target="_blank">here</a>. The photos selected by the user will be displayed for you viewing pleasure.</p>
+      </div>
+      <p>Things to do.</p>
+      <ul>
+        <li>Add authentication</li>
+        <li>Filter/sort photos based on Set</li>
+        <li>Display photo comments</li>
+      </ul>
+      <p>All kind of feedback, requests, etc will be appreciated. Thanks for reading!</p>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,5 @@
+{% for image in image_array %}
+  <a href="{{ image | remove: '.jpg' }}_b.jpg" data-lightbox="flickr-photo" title="{{ page.title }}" alt="{{ page.title }}">
+    <img src="{{ image }}" />
+  </a>
+{% endfor %}

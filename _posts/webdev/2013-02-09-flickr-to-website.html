@@ -1,0 +1,47 @@
+---
+layout: post
+categories: webdev
+
+title: Displaying public Flickr Photos on Your Website
+
+image:
+  main: https://farm9.staticflickr.com/8097/8457687949_e56db9bef5.jpg
+  datasrcset: 'https://farm9.staticflickr.com/8097/8457687949_e56db9bef5_n.jpg 320w, https://farm9.staticflickr.com/8097/8457687949_e56db9bef5.jpg 500w, https://farm9.staticflickr.com/8097/8457687949_e56db9bef5_z.jpg 640w, https://farm9.staticflickr.com/8097/8457687949_e56db9bef5_c.jpg 800w, https://farm9.staticflickr.com/8097/8457687949_e56db9bef5_b.jpg 981w'
+
+excerpt: In this tutorial, I’m going to show you how to display public photos from your Flickr photo set onto your website.
+tags: [ Flckr, Flickr API, Flickr Set, How To, Javascript, Tutorial ]
+
+date: 2013-02-09T22:16:50+00:00
+modified: 2015-03-14T20:09:23+00:00
+---
+
+<div class="container" id="webdev">
+  <section class="row post">
+    <div class="col-lg-12">
+      <h1>{{ page.title }}</h1>
+      <div class="well well-small center">You can view the <a title="Flickr to Website - SandBox" href="http://sandbox.lovelldsouza.com/flickr-to-website" target="_blank">demo</a> before you begin.</div>
+      <p>In this tutorial, I’m going to show you how to display public photos from your (or any one else’s) Flickr photo set onto your website. The main reason I do this is because I have a <a title="Weddings by Lovell D'souza" href="/weddings/">wedding photography</a> page and I like to showcase some photos on it. And since my photo sets are nicely organized on Flickr, I like to use Flickr to host my images instead of re-hosting them on my web server.</p>
+      <p>There are a few reasons why I (and you) would want to do this:</p>
+      <ul>
+        <li>I have a <a title="Flickr Pro" href="http://www.flickr.com/help/limits/#28" target="_blank">Flickr Pro</a> account and can upload infinite number of photos.</li>
+        <li>By not uploading photos onto my web host, I save server space and avoid duplicity of photos.</li>
+        <li>Having images load from a different domain, speeds up the time taken for a page to load and also saves me a ton of bandwidth.</li>
+        <li>The <a title="Flickr API" href="http://www.flickr.com/services/api/" target="_blank">Flickr API</a> is awesome!</li>
+      </ul>
+      <p>Now to my use case. I basically wanted to display the public photos from a particular photo set on my website. For those of you who are not familiar with Flickr terms, a set is just like an album. You can have collections and sets in Flickr. Just imagine that you have a huge cupboard. <a title="Lovell D'souza's sets on Flickr" href="http://www.flickr.com/photos/lovelldies/sets" target="_blank">Sets are like albums</a>, <a title="Lovell D'souza's collections on Flickr" href="http://www.flickr.com/photos/lovelldies/collections/" target="_blank">collections are like shelves</a> and the <a title="Lovell D'souza on Flickr" href="http://www.flickr.com/photos/lovelldies/" target="_blank">cupboard is your Flickr account</a>.</p>
+      <p>With my current workflow, I had to go to the individual image on Flickr (refer to image below), click on the “Share” menu, select “Copy the HTML”, select the size I want, copy the code, paste it into the source code of the the album page. Whoaaa dude!!! That’s a lot of steps! And, I’d repeat these actions for some 60 to 70 photos. What a waste of time!</p>
+      <div class="wedding-img center"><a title="Image Code by Lovell D'souza, on Flickr" href="http://www.flickr.com/photos/lovelldies/8457720357/"><img class="img-polaroid" alt="Image Code" src="http://farm9.staticflickr.com/8509/8457720357_7051ddaf76_b.jpg"></a></div>
+      <p>Back to my use case. In order to get public images from my set (without having to go through the tedious process pictured above), I require the set ID. Lets take an example of a wedding album belonging to <a title="Samantha &amp; Brijesh - Wedding Album on Flickr, by Lovell D'souza" href="http://www.flickr.com/photos/lovelldies/sets/72157632700264359/" target="_blank">Samantha &amp; Brijesh</a>.</p>
+      <p>Here is a screenshot of the album that I see. Note: I get to see <i>all</i> the photos, but only make a few public since no one wants to go through 200+ photos. I keep the number to less than 100 since folks tend to get bored after a point.</p>
+      <div class="wedding-img center"><a title="Flickr Set by Lovell D'souza, on Flickr" href="http://www.flickr.com/photos/lovelldies/8457687949/"><img class="img-polaroid" alt="Flickr Set" src="http://farm9.staticflickr.com/8097/8457687949_e56db9bef5_b.jpg"></a></div>
+      <p>The URL to the page is below.</p>
+      <pre class="prettyprint">http://www.flickr.com/photos/lovelldies/sets/72157632700264359/</pre>
+      <p>The set ID is the bunch of numbers (in this case 72157632700264359) that come after <i>/sets/</i></p>
+      <p>Now that we have that figured out, lets look at the code. Documentation inline. For you to get through this tutorial, you will need to know the basics of JavaScript, jQuery and how the Flickr API works.</p>
+      <pre class="prettyprint">/**<br> * Function to get images from Flickr<br> *<br> * @setId The flickr set the images belong to.<br> */  <br>function getImgs(setId) {<br>  var URL = "https://api.flickr.com/services/rest/" +  // Wake up the Flickr API gods.<br>    "?method=flickr.photosets.getPhotos" +  // Get photo from a photoset. http://www.flickr.com/services/api/flickr.photosets.getPhotos.htm<br>    "&amp;api_key=<<INSERT YOUR API KEY HERE>>" +  // API key. Get one here: http://www.flickr.com/services/apps/create/apply/<br>    "&amp;photoset_id=" + setId +  // The set ID.<br>    "&amp;privacy_filter=1" +  // 1 signifies all public photos.<br>    "&amp;per_page=20" + // For the sake of this example I am limiting it to 20 photos.<br>    "&amp;format=json&amp;nojsoncallback=1";  // Er, nothing much to explain here.<br><br>  // See the API in action here: http://www.flickr.com/services/api/explore/flickr.photosets.getPhotos<br>  $.getJSON(URL, function(data){<br>    $.each(data.photoset.photo, function(i, item){<br>      // Creating the image URL. Info: http://www.flickr.com/services/api/misc.urls.html<br>      var img_src = "http://farm" + item.farm + ".static.flickr.com/" + item.server + "/" + item.id + "_" + item.secret + "_m.jpg";<br>      var img_thumb = $("&lt;img/&gt;").attr("src", img_src).css("margin", "8px")<br>      $(img_thumb).appendTo("#flickr-images");<br>    });<br>  });<br>}<br><br>$(document).ready(function() {<br>  getImgs("72157632700264359"); // Call the function!<br>});</pre>
+      <p>And that’s it. As simple as that!</p>
+      <div class="alert alert-info">You can see the code in action <a title="Flickr to Website - SandBox" href="http://sandbox.lovelldsouza.com/flickr-to-website" target="_blank">here</a> and the wedding album is available on my website here: <a href="/weddings/samantha-brijesh-mangalore/">Samantha &amp; Brijesh</a>. If you have any queries, just leave a comment and I shall get back to you.</div>
+      </div>
+    </div>
+  </section>
+</div>

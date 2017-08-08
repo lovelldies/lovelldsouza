@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<div class="container-fluid">
+  <div class="row">
+    <img class="lazyload img-responsive header-image" alt="{{ page.title }} by Lovell D'souza" title="{{ page.title }} by Lovell D'souza"
+          srcset="{{ site.preloadimage }}" data-sizes="auto"
+          src="{{ page.image.main }}"
+          data-srcset="{{ page.image.datasrcset }}" />
+  </div>
+</div>
+
+{% assign cat = page.category %}
+
+{{ content }}
+
+<div class="container-fluid bg">
+  <div class="row equal-col-height">
+    {% for post in site.categories[cat] %}
+
+      {% if post.image.datasrcset %}
+        {% assign src = post.image.main %}
+        {% assign data_srcset = post.image.datasrcset %}
+      {% else %}
+        {% assign src = post.image %}
+        {% assign data_srcset = post.image %}
+      {% endif %}
+
+      {% if post.couple %}
+        {% assign title = post.couple %}
+      {% else %}
+        {% assign title = post.title %}
+      {% endif %}
+
+      <div class="col-md-4 portfolio-item">
+        <a href="{{ site.baseurl}}{{ post.url }}">
+          <img class="lazyload img-responsive" alt="{{ post.title }}" title="{{ post.title }}"
+          srcset="{{ site.preloadimage }}" data-sizes="auto"
+          src="{{ src }}"
+          data-srcset="{{ data_srcset }}" />
+        </a>
+        <h2><a href="{{ site.baseurl}}{{ post.url }}">{{ title }}</a></h2>
+        <p>{{ post.excerpt }}</p>
+      </div>
+
+    {% endfor %}
+  </div>
+</div>

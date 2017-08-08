@@ -1,0 +1,65 @@
+---
+layout: post
+title: Tags
+permalink: /tags
+excerpt: Here are all the tags I've used on my website posts. All the tags are hyperlinked to the their respective posts. Just click around.
+changefreq: weekly
+priority: 1.0
+
+image:
+  main: https://farm8.staticflickr.com/7079/7187343454_7963d530d5.jpg
+  datasrcset: 'https://farm8.staticflickr.com/7079/7187343454_7963d530d5_n.jpg 320w, https://farm8.staticflickr.com/7079/7187343454_7963d530d5.jpg 500w, https://farm8.staticflickr.com/7079/7187343454_7963d530d5_z.jpg 640w, https://farm8.staticflickr.com/7079/7187343454_7963d530d5_c.jpg 800w, https://farm8.staticflickr.com/7079/7187343454_7963d530d5_b.jpg 1024w, https://farm8.staticflickr.com/7079/7187343454_15ab6d4c58_h.jpg 1600w'
+---
+<style>
+h3 {
+  padding-top: 55px;
+}
+li {
+  font-size: 0.8rem;
+}
+</style>
+<div class="container">
+<section class="row">
+<div class="col-lg-12">
+    <h1>{{ page.title }}</h1>
+    {% assign rawtags = "" %}
+    {% for post in site.posts %}
+    {% assign ttags = post.tags | join:'|' | append:'|' %}
+    {% assign rawtags = rawtags | append:ttags %}
+    {% endfor %}
+    {% assign rawtags = rawtags | split:'|' | sort %}
+
+    {% assign tags = "" %}
+    {% for tag in rawtags %}
+    {% if tag != "" %}
+        {% if tags == "" %}
+        {% assign tags = tag | split:'|' %}
+        {% endif %}
+        {% unless tags contains tag %}
+        {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+        {% endunless %}
+    {% endif %}
+    {% endfor %}
+
+    <h2>A wall full of tags!</h2>
+    {% for tag in tags %}
+    <a href="#{{ tag | slugify }}">{{ tag | capitalize }}</a>, 
+    {% endfor %}
+</div>
+</section>
+
+<section class="spotlight style1 grey-bg">
+  <div class="content" id="tagpage-tagposts">
+    {% for tag in tags %}
+    <h3 id="{{ tag | slugify }}">{{ tag }}</h3>
+      <ul>
+      {% for post in site.posts %}
+      {% if post.tags contains tag %}
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> &middot; <small>{{ post.date | date_to_string }}</small></li>
+       {% endif %}
+     {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</section>
+</div>

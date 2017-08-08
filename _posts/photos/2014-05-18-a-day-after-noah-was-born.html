@@ -1,0 +1,35 @@
+---
+layout: post
+categories: photos
+
+title: A day after Noah was born
+
+image:
+  main: https://farm3.staticflickr.com/2931/14024402320_432f2ca8f4.jpg
+  datasrcset: 'https://farm3.staticflickr.com/2931/14024402320_432f2ca8f4_n.jpg 320w, https://farm3.staticflickr.com/2931/14024402320_432f2ca8f4.jpg 500w, https://farm3.staticflickr.com/2931/14024402320_432f2ca8f4_z.jpg 640w, https://farm3.staticflickr.com/2931/14024402320_432f2ca8f4_c.jpg 800w, https://farm3.staticflickr.com/2931/14024402320_432f2ca8f4_b.jpg 1024w'
+
+excerpt: I couldn't meet little Noah the day he was born and I had to run around and shoot a wedding. But I did meet him the next day. Here are a few photos.
+tags: [ Baby, Birth, Daniel, Goa, Melanie, Noah ]
+
+date: 2014-05-18T13:13:18+00:00
+modified: 2015-03-28T12:06:19+00:00
+---
+
+<div class="container" id="photos">
+  <section class="row post">
+    <div class="col-lg-12">
+      <h1>{{ page.title }}</h1>
+      <p>I couldn’t meet little Noah the day he was born and I had to run around and shoot a wedding. But I did meet him the next day. Here are 5 photos of a day old Noah.</p>
+    </div>
+  </section>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div id="flickr-photos">
+      {% assign image_array = 'https://farm3.staticflickr.com/2931/14024402320_432f2ca8f4.jpg, https://farm3.staticflickr.com/2902/14024404870_6e79109e32.jpg, https://farm3.staticflickr.com/2899/14024409840_becb001aeb.jpg, https://farm6.staticflickr.com/5570/14187898686_d505aeaae6.jpg, https://farm6.staticflickr.com/5580/14208602012_7e68487cc2.jpg' | split: ',' %}
+      
+      {% include lightbox-img.html %}
+    </div>
+  </div>
+</div>
