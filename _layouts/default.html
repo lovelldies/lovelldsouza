@@ -8,10 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="twitter:site" content="@lovelldies" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@{{ site.twitter_username }}" />
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="Lovell D&#039;souza">
   <meta property="og:site_name" content="{{ site.title }}" />
-  <meta property="og:locale" content="en_GB" />
+  <meta property="og:locale" content="en_US" />
   <meta property="fb:app_id" content="154299697932308" />
   <meta property="article:publisher" content="https://www.lovelldouza.com" />
 
@@ -37,6 +38,18 @@
   <meta name="msapplication-TileImage" content="{{ site.baseurl }}/assets/img/favicons/favicon-144.png">
   <meta name="msapplication-config" content="{{ site.baseurl }}/assets/img/favicons/browserconfig.xml">
   <!-- favicons -->
+
+  {% if page.image %}
+    <meta property="og:image:secure_url" content="{{ page.image }}" />
+    <meta property="og:image" content="{{ page.image | replace: 'https://', 'https://' }}" />
+    <meta name="twitter:image" content="{{ page.image }}" />
+    <meta itemprop="image" content="{{ page.image }}">
+  {% else %}
+    <meta property="og:image:secure_url" content="{{ site.image }}" />
+    <meta property="og:image" content="{{ site.image | replace: 'https://', 'https://' }}" />
+    <meta name="twitter:image" content="{{ site.image }}" />
+    <meta itemprop="image" content="{{ site.image }}">
+  {% endif %}
 
   {% if page.title %}
     <title>{{ page.title }} &middot; Lovell D&#039;souza</title>
