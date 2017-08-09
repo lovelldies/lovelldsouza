@@ -2,8 +2,8 @@ title: Lovell D&#039;souza &ndash; Freelance Photographer, Web Developer, Travel
 email: lovelldies@gmail.com
 description: The glorious website of Lovell D&#039;souza. Showcasing photography from weddings and travel, web development and other random matter that may amuse you.
 image: https://farm1.staticflickr.com/598/32762787495_c0bff8968d_h.jpg
-baseurl: "/lovelldsouza" # the subpath of your site, e.g. /blog
-url: "https://api-project-496539557864.firebaseapp.com/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/lovelldsouza"
+url: "https://api-project-496539557864.firebaseapp.com/" # Change to https://www.lovelldsouza.com later
 twitter_username: lovelldies
 github_username:  lovelldies
 permalink: /:categories/:title/
