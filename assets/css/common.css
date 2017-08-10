@@ -29,6 +29,10 @@ blockquote p {
   margin: 0 !important;
 }
 
+.category p {
+  text-align: center;
+}
+
 .carousel,
 .item,
 .active {
@@ -91,6 +95,18 @@ blockquote p {
   display: flex;
   flex-wrap: wrap;
 }
+
+#faq img {
+  margin: 50px 0;
+  box-shadow: 0px 0px 12px 0px #000000;
+  border-radius: 4px;
+}
+.img-shadow {
+  box-shadow: 0px 0px 12px 0px #000000;
+  border-radius: 4px;
+  max-width: 1000px;
+}
+  
 
 footer {
   padding-bottom: 15px;
@@ -172,7 +188,8 @@ p {
 }
 
 .post p {
-  margin: 75px 0;
+  margin: 75px 5%;
+  text-align: justify;
 }
 .post img {
   border: 1px solid white;
@@ -237,6 +254,8 @@ section {
 
 /* Social icons sprite */
 #social-icons {
+  border-top: 2px solid #e0e0e0;
+  border-bottom: 2px solid #212121;
 	font-size: 15px;
 	padding: 50px;
 	text-align: center;

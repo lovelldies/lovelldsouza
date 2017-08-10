@@ -1,6 +1,8 @@
 _site
-.sass-cache
+.firebaserc
 .jekyll-metadata
 .vscode
+.sass-cache
+firebase-debug.log
 Gemfile
 ignore

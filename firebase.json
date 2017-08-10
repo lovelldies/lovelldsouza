@@ -1,0 +1,168 @@
+{
+  "hosting": {
+    "cleanUrls": true,
+    "public": "_site",
+    "ignore": [ "firebase.json" ],
+    "headers": [
+      {
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          } 
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=7200"
+          }
+        ]
+      },
+      {
+        "source": "404.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=300"
+          } 
+        ]
+      } 
+    ],
+    "redirects": [
+      {
+        "source": "lovelldsouza.com/+",
+        "destination": "https://plus.google.com/+LovellDsouza",
+        "type": 301
+      },
+      {
+        "source": "lovelldsouza.com/fb",
+        "destination": "https://www.facebook.com/lovelldies",
+        "type": 301
+      },
+      {
+        "source": "/tag/*",
+        "destination": "/tags",
+        "type": 301
+      },
+      {
+        "source": "/tags/*",
+        "destination": "/tags",
+        "type": 301
+      },
+      {
+        "source": "/tag",
+        "destination": "/tags",
+        "type": 301
+      },
+      {
+        "source": "/travel/agonda-beach-goa/",
+        "destination": "https://happyfeet.us/goa/the-only-moment-we-were-alone",
+        "type": 301
+      },
+      {
+        "source": "/travel/back-from-stok/",
+        "destination": "https://happyfeet.us/jammu-kashmir/back-from-stok",
+        "type": 301
+      },
+      {
+        "source": "/travel/borra-caves/",
+        "destination": "https://happyfeet.us/andhra-pradesh/borra-caves-araku-valley",
+        "type": 301
+      },
+      {
+        "source": "/travel/madhuri-lake-tawang/",
+        "destination": "https://happyfeet.us/big-picture/madhuri-lake-tawang",
+        "type": 301
+      },
+      {
+        "source": "/travel/flowers-kaas-plateau/",
+        "destination": "https://happyfeet.us/maharashtra/road-trip-kaas-plateau-of-flowers",
+        "type": 301
+      },
+      {
+        "source": "/travel/sunset-at-the-araku-valley/",
+        "destination": "https://www.flickr.com/photos/lovelldies/9228637024/",
+        "type": 301
+      },
+      {
+        "source": "/travel/kurnool-andhra-pradesh/",
+        "destination": "https://happyfeet.us/andhra-pradesh/kurnool",
+        "type": 301
+      },
+      {
+        "source": "/travel/approaching-zoji-la/",
+        "destination": "https://happyfeet.us/jammu-kashmir/approaching-zoji-la",
+        "type": 301
+      },
+      {
+        "source": "/travel/pangong-lake-ladakh/",
+        "destination": "https://happyfeet.us/jammu-kashmir/pangong-tso-lake-ladakh",
+        "type": 301
+      },
+      {
+        "source": "/ninella-elston-goa/",
+        "destination": "/weddings/ninella-elston-wedding-goa/",
+        "type": 301
+      },
+      {
+        "source": "lovelldsouza.com/instagram/",
+        "destination": "https://www.instagram.com/lovell/",
+        "type": 301
+      },
+      {
+        "source": "/goa/sunset-on-the-nexus-5/",
+        "destination": "/photos/sunset-on-the-nexus-5/",
+        "type": 301
+      },
+      {
+        "source": "/goa/mel-dan-noah-bondla-zoo/",
+        "destination": "/people/mel-dan-noah-bondla-zoo/",
+        "type": 301
+      },
+      {
+        "source": "/goa/sunset-at-corlim/",
+        "destination": "/photos/sunset-at-corlim/",
+        "type": 301
+      },
+      {
+        "source": "/photos/mave-and-eric/",
+        "destination": "/people/mave-and-eric/",
+        "type": 301
+      },
+      {
+        "source": "/photos/mad-at-work/",
+        "destination": "https://www.facebook.com/MaDquilling",
+        "type": 301
+      },
+      {
+        "source": "/metalgigs/my-eucalyptine-death-live/",
+        "destination": "/metalgigs/my-eucalyptine-depth-live/",
+        "type": 301
+      },
+      {
+        "source": "/people/emily-and-vinit/",
+        "destination": "/coupleshoots/emily-and-vinit/",
+        "type": 301
+      },
+      {
+        "source": "/people/madhurima-and-rahul/",
+        "destination": "/coupleshoots/madhurima-and-rahul/",
+        "type": 301
+      },
+      {
+        "source": "/timelapse/",
+        "destination": "/timelapses/",
+        "type": 301
+      },
+      {
+        "source": "source",
+        "destination": "destination",
+        "type": 301
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{% if page.comments != false %}
+<style>
+#comments .container h3 {
+  padding: 0 30px 20px 0;
+}
+</style>
+<div class="container-fluid" id="comments" style="background-color: #f1f1f1;
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #e0e0e0;">
+  <div class="container" style="padding-top:50px;padding-bottom:50px;">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Comments</h3>
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url = 'https://www.lovelldsouza.com{{ page.url }}';
+            /* this.page.identifier = '{{ page.url }}'; */
+          };
+          (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://lovelldsouzaswebsite.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
