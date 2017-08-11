@@ -33,7 +33,13 @@ layout: default
         {% assign title = post.title %}
       {% endif %}
 
-      <div class="col-md-4 portfolio-item">
+      {% if post.type %}
+        {% assign type = post.type %}
+      {% else %}
+        {% assign type = '' %}
+      {% endif %}
+
+      <div class="col-md-4 portfolio-item {{ type }}">
         <a href="{{ site.baseurl}}{{ post.url }}">
           <img class="lazyload img-responsive" alt="{{ post.title }}" title="{{ post.title }}"
           srcset="{{ site.preloadimage }}" data-sizes="auto"

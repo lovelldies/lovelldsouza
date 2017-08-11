@@ -1,4 +1,4 @@
-<div class="row" style="height:60vw;">
+<div class="row" id="carousel-container">
   <header id="myCarousel" class="carousel slide">
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -7,27 +7,31 @@
     <li data-target="#myCarousel" data-slide-to="3"></li>
     <li data-target="#myCarousel" data-slide-to="4"></li>
     <li data-target="#myCarousel" data-slide-to="5"></li>
+    <li data-target="#myCarousel" data-slide-to="6"></li>
   </ol>
 
   <div class="carousel-inner">
     <div class="item active">
-      <a href="/familyshoots/">
-        {% include image.html
-        loc="https://farm5.staticflickr.com/4420/36466726975_cb3c24bc39_n.jpg"
-        alt="Family Photoshoots by Lovell D&#039;souza"
-        datasrcset="https://farm5.staticflickr.com/4420/36466726975_cb3c24bc39_n.jpg 320w, https://farm5.staticflickr.com/4420/36466726975_cb3c24bc39.jpg 500w, https://farm5.staticflickr.com/4420/36466726975_cb3c24bc39_z.jpg 640w, https://farm5.staticflickr.com/4420/36466726975_cb3c24bc39_c.jpg 800w, https://farm5.staticflickr.com/4420/36466726975_cb3c24bc39_b.jpg 1024w, https://farm5.staticflickr.com/4420/36466726975_deaa1314e0_h.jpg 1600w, https://farm5.staticflickr.com/4420/36466726975_24814bf2c3_k.jpg 2048w" %}
+      <a href="{{ site.baseurl }}/familyshoots/" title="Kids Photoshoots by Lovell D&#039;souza">
+        <div class="fill" style="background-image:url('{{ site.baseurl }}/assets/img/kids-photoshoots-goa.webp'); background-size: cover; background-position: center center;  background-repeat: no-repeat;"></div>
+        <div class="carousel-caption">
+          <h2>Kids</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="item">
+      <a href="{{ site.baseurl }}/familyshoots/" title="Family Photoshoots by Lovell D&#039;souza">
+        <div class="fill" style="background-image:url('{{ site.baseurl }}/assets/img/family-photoshoots-goa.webp'); background-size: cover; background-position: center center;  background-repeat: no-repeat;"></div>
         <div class="carousel-caption">
           <h2>Family Photoshoots</h2>
         </div>
       </a>
     </div>
-  
+
     <div class="item">
-      <a href="/weddings/#christian">
-        {% include image.html
-        loc="https://farm3.staticflickr.com/2936/33386396410_fde5a89de9_n.jpg"
-        alt="White Weddings by Lovell D&#039;souza"
-        datasrcset="https://farm3.staticflickr.com/2936/33386396410_fde5a89de9_n.jpg 320w, https://farm3.staticflickr.com/2936/33386396410_fde5a89de9.jpg 500w, https://farm3.staticflickr.com/2936/33386396410_fde5a89de9_z.jpg 640w, https://farm3.staticflickr.com/2936/33386396410_fde5a89de9_c.jpg 800w, https://farm3.staticflickr.com/2936/33386396410_fde5a89de9_b.jpg 1024w, https://farm3.staticflickr.com/2936/33386396410_6a0e541de0_h.jpg 1600w, https://farm3.staticflickr.com/2936/33386396410_441adc298e_k.jpg 2048w" %} 
+      <a href="{{ site.baseurl }}/weddings/#christian" title="White Weddings by Lovell D&#039;souza">
+        <div class="fill" style="background-image:url('{{ site.baseurl }}/assets/img/christian-weddings-goa.webp'); background-size: cover; background-position: center center;  background-repeat: no-repeat;"></div>
         <div class="carousel-caption">
           <h2>White Weddings</h2>
         </div>
@@ -35,11 +39,8 @@
     </div>
   
     <div class="item">
-      <a href="/weddings/#indian">
-        {% include image.html
-        loc="https://farm3.staticflickr.com/2823/32957335993_38627602cf_n.jpg"
-        alt="Indian Weddings by Lovell D&#039;souza"
-        datasrcset="https://farm3.staticflickr.com/2823/32957335993_38627602cf_n.jpg 320w, https://farm3.staticflickr.com/2823/32957335993_38627602cf.jpg 500w, https://farm3.staticflickr.com/2823/32957335993_38627602cf_z.jpg 640w, https://farm3.staticflickr.com/2823/32957335993_38627602cf_c.jpg 800w, https://farm3.staticflickr.com/2823/32957335993_38627602cf_b.jpg 1024w, https://farm3.staticflickr.com/2823/32957335993_b5d508ffe7_h.jpg 1600w, https://farm3.staticflickr.com/2823/32957335993_ca8d6a362c_k.jpg 2048w" %}
+      <a href="{{ site.baseurl }}/weddings/#indian" title="Indian Weddings by Lovell D&#039;souza">
+        <div class="fill" style="background-image:url('{{ site.baseurl }}/assets/img/indian-weddings.webp'); background-size: cover; background-position: top center;  background-repeat: no-repeat;"></div>
       </a>
       <div class="carousel-caption">
         <h2>Indian Weddings</h2>
@@ -47,11 +48,8 @@
     </div>
 
     <div class="item">
-      <a href="/coupleshoots/">
-        {% include image.html
-        loc="https://farm5.staticflickr.com/4343/35495402294_113c6b4c52_n.jpg"
-        alt="Couple Photoshoots by Lovell D&#039;souza"
-        datasrcset="https://farm5.staticflickr.com/4343/35495402294_113c6b4c52_n.jpg 320w, https://farm5.staticflickr.com/4343/35495402294_113c6b4c52.jpg 500w, https://farm5.staticflickr.com/4343/35495402294_113c6b4c52_z.jpg 640w, https://farm5.staticflickr.com/4343/35495402294_113c6b4c52_c.jpg 800w, https://farm5.staticflickr.com/4343/35495402294_113c6b4c52_b.jpg 1024w, https://farm5.staticflickr.com/4343/35495402294_e900811677_h.jpg 1600w, https://farm5.staticflickr.com/4343/35495402294_8539cb0608_k.jpg 2048w" %}
+      <a href="{{ site.baseurl }}/coupleshoots/" title="Couple Photoshoots by Lovell D&#039;souza">
+        <div class="fill" style="background-image:url('{{ site.baseurl }}/assets/img/couple-shoots-goa.webp'); background-size: cover; background-position: center center;  background-repeat: no-repeat;"></div>
         <div class="carousel-caption">
           <h2>Couple Photoshoots</h2>
         </div>
@@ -59,11 +57,8 @@
     </div>
 
     <div class="item">
-      <a href="{{ site.baseurl }}/metalgigs/">
-        {% include image.html
-        loc="https://farm8.staticflickr.com/7573/16165686911_0e8f7d7330_n.jpg"
-        alt="Metal Gigs by Lovell D&#039;souza"
-        datasrcset="https://farm8.staticflickr.com/7573/16165686911_0e8f7d7330_n.jpg 320w, https://farm8.staticflickr.com/7573/16165686911_0e8f7d7330.jpg 500w, https://farm8.staticflickr.com/7573/16165686911_0e8f7d7330_z.jpg 640w, https://farm8.staticflickr.com/7573/16165686911_0e8f7d7330_c.jpg 800w, https://farm8.staticflickr.com/7573/16165686911_0e8f7d7330_b.jpg 1024w, https://farm8.staticflickr.com/7573/16165686911_394ee45098_h.jpg 1600w" %}
+      <a href="{{ site.baseurl }}/metalgigs/" title="Metal Gigs">
+        <div class="fill" style="background-image:url('{{ site.baseurl }}/assets/img/metal-gigs.webp'); background-size: cover; background-position: center center;  background-repeat: no-repeat;"></div>
         <div class="carousel-caption">
           <h2>Metal Gigs</h2>
         </div>
@@ -71,11 +66,8 @@
     </div>
 
     <div class="item">
-      <a href="{{ site.baseurl }}/photos/">
-        {% include image.html
-        loc="https://farm8.staticflickr.com/7371/27343117130_0dd6b6495b_n.jpg"
-        alt="Photos by Lovell D&#039;souza"
-        datasrcset="https://farm8.staticflickr.com/7371/27343117130_0dd6b6495b_n.jpg 320w, https://farm8.staticflickr.com/7371/27343117130_0dd6b6495b.jpg 500w, https://farm8.staticflickr.com/7371/27343117130_0dd6b6495b_z.jpg 640w, https://farm8.staticflickr.com/7371/27343117130_0dd6b6495b_c.jpg 800w, https://farm8.staticflickr.com/7371/27343117130_0dd6b6495b_b.jpg 1024w, https://farm8.staticflickr.com/7371/27343117130_a6ea0a06c5_h.jpg 1600w, https://farm8.staticflickr.com/7371/27343117130_c31687fabf_k.jpg 2048w" %}
+      <a href="{{ site.baseurl }}/photos/" title="Photos by Lovell D&#039;souza">
+        <div class="fill" style="background-image:url('{{ site.baseurl }}/assets/img/cycling-goa-xc.webp'); background-size: cover; background-position: center center;  background-repeat: no-repeat;"></div>
         <div class="carousel-caption">
           <h2>Other Stuff</h2>
         </div>
