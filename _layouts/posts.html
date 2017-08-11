@@ -2,9 +2,15 @@
 layout: default
 ---
 
+{% if page.unique_title %}
+  {% assign page_title = page.unique_title %}
+{% else %}
+  {% assign page_title = page.title %}
+{% endif %}
+
 <div class="container-fluid">
   <div class="row">
-    <img class="lazyload img-responsive header-image" alt="{{ page.title }} by Lovell D'souza" title="{{ page.title }} by Lovell D'souza"
+    <img class="lazyload img-responsive header-image" alt="{{ page_title }} by Lovell D'souza" title="{{ page_title }}"
           srcset="{{ site.preloadimage }}" data-sizes="auto"
           src="{{ page.image.main }}"
           data-srcset="{{ page.image.datasrcset }}" />

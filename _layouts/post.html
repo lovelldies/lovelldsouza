@@ -3,11 +3,16 @@ layout: default
 ---
 {% assign src = page.image.main %}
 {% assign data_srcset = page.image.datasrcset %}
+{% if page.unique_title %}
+  {% assign title = page.unique_title %}
+{% else %}
+  {% assign title = page.title %}
+{% endif %}
 
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <img class="lazyload img-responsive header-image" alt="{{ page.title }}" title="{{ page.title }}"
+      <img class="lazyload img-responsive header-image" alt="{{ title }}" title="{{ title }}"
         srcset="{{ site.preloadimage }}" data-sizes="auto"
         src="{{ src }}"
         data-srcset="{{ data_srcset }}" />

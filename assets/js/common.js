@@ -18,4 +18,11 @@ $(document).ready(function() {
       1024 : '_b'
     }
   });
+
+  $(".event").click(function(evt) {
+    evt.preventDefault();
+    $("#filters div").hide('slow');
+    var id = $(this).attr('id');
+    $("." + id).show('slow');
+  });
 });
