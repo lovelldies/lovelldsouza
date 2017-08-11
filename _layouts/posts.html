@@ -22,7 +22,7 @@ layout: default
 {{ content }}
 
 <div class="container-fluid bg">
-  <div class="row equal-col-height">
+  <div class="row equal-col-height" id="filters">
     {% for post in site.categories[cat] %}
 
       {% if post.image.datasrcset %}
@@ -45,7 +45,7 @@ layout: default
         {% assign type = '' %}
       {% endif %}
 
-      <div class="col-md-4 portfolio-item {{ type }}">
+      <div class="col-md-4 portfolio-item all {{ type }}">
         <a href="{{ site.baseurl}}{{ post.url }}">
           <img class="lazyload img-responsive" alt="{{ post.title }}" title="{{ post.title }}"
           srcset="{{ site.preloadimage }}" data-sizes="auto"

@@ -20,8 +20,10 @@ $(document).ready(function() {
   });
 
   $(".event").click(function(evt) {
+    console.log (1)
     evt.preventDefault();
     $("#filters div").hide('slow');
+    console.log (2)
     var id = $(this).attr('id');
     $("." + id).show('slow');
   });
