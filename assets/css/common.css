@@ -38,18 +38,35 @@ blockquote p {
 .active {
   height: 100%;
 }
+
 #carousel-container {
   height: 100%;
 }
+
 .carousel-inner {
   height: 100%;
 }
+
 .carousel-caption {
   text-shadow: 1px 2px 5px #000;
 }
 
 .center {
   text-align: center;
+}
+
+#comments {
+  background-color: #f1f1f1;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#comments .container h3 {
+  padding: 0 30px 20px 0;
+}
+
+#contact-text p {
+  text-align: justify;
 }
 
 .container-fluid {
@@ -76,10 +93,12 @@ blockquote p {
   background-color: rgba(0, 0, 0, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
 }
+
 #nav .dropdown-menu>li>a:focus,
 #nav .dropdown-menu>li>a:hover {
   background-color: #000;
 }
+
 #nav .dropdown-divider {
   border-top: 1px dotted rgba(128, 128, 128, 0.5);
 }
@@ -108,9 +127,9 @@ blockquote p {
   box-shadow: 0px 0px 12px 0px #000000;
   border-radius: 4px;
 }
-.img-shadow {
-  box-shadow: 0px 0px 12px 0px #000000;
-  max-width: 2048px;
+
+.form-group {
+  margin-top: 30px;
 }
 
 footer {
@@ -126,28 +145,31 @@ footer {
   background-color: rgb(246, 246, 246);
   text-align: center;
 }
+
 .homereview p {
   text-transform: uppercase;
   letter-spacing: 0.25em !important;
   line-height: 2.5em;
   margin: 0;
 }
+
 .homereview .quote {
   font-size: 5em;
   font-family: 'Lovers Quarrel', cursive;
 }
+
 .homereview .reviewhighlight {
   font-family: 'Lovers Quarrel', cursive;
   text-transform: none;
   font-size: 5rem;
   letter-spacing: initial;
 }
+
 .homereview-cta {
   border-bottom: 2px solid #212121;
   text-align: center;
   background-color: #191919;
   color: white;
-  xbox-shadow: 0px -2px 12px 3px #a5a5a5;
   margin: 0;
   border-radius: 0 !important;
   padding: 80px 0;
@@ -157,12 +179,21 @@ footer {
   width: 100%;
 }
 
+.img-shadow {
+  box-shadow: 0px 0px 12px 0px #000000;
+  max-width: 2048px;
+}
+
 .portfolio-item .img-responsive,
 .header-image {
   box-shadow: 0px 0px 10px 0px #000000;
 }
 
 label {
+  font-weight: 400;
+}
+
+.lb-data .lb-caption {
   font-weight: 400;
 }
 
@@ -219,6 +250,13 @@ p {
   font-size: 0.7rem;
 }
 
+postmeta {
+  font-size: 0.6rem;
+  float: right;
+  margin: 5px;
+  color: #b3b3b3;
+}
+
 .row {
   margin-left: 0 !important;
   padding-left: 0 !important;
@@ -247,7 +285,7 @@ section {
 .spacedout {
   text-transform: uppercase;
   font-weight: 300;
-  letter-spacing: 0.25em !important;
+  letter-spacing: 0.1em !important;
 }
 
 #coupleshoots h1,
@@ -296,7 +334,6 @@ section {
 	font-size: 1.3rem;
 	height: 2.5rem;
 	line-height: 2.5rem;
-	xmargin: 0 5px;
 	position: relative;
 	text-align: center;
 	-webkit-user-select: none;
@@ -386,15 +423,28 @@ section {
   padding-bottom: 2rem;
 }
 
-@media only screen and (max-width : 1200px) {
+@media only screen and (min-width: 979px) {
+  #contact-text {
+    padding-right: 30px;
+    padding-top: 125px;
+  }
+  #contact section {
+    padding: 100px 0 15px 0;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
   .family-padding {
     padding: 6% 0;
   }
 }
 
-@media only screen and (max-width : 979px) {
+@media only screen and (max-width: 979px) {
   #carousel-container {
     height: 50%;
+  }
+  #email-form {
+    margin-top: 50px;
   }
   .nav li a {
     padding: 15px 7px;
@@ -402,21 +452,30 @@ section {
   .nav .dropdown-menu>li>a {
     padding: 3px 20px;
   }
+  .post p {
+    margin: 40px 3%;
+  }
 }
 
-@media only screen and (max-width : 767px) {
+@media only screen and (max-width: 767px) {
   #carousel-container {
     height: 50%;
   }
   #carousel-container h2 {
     font-size: 0.9rem;
   }
+  #contact h1 {
+    margin-bottom: 10px;
+  }
+  #footer-text-div p {
+    font-size: 0.65rem;
+  }
   .nav li a {
-      padding: 15px 25px;
+    padding: 15px 25px;
   }
   .homereview .reviewhighlight {
-    font-size: 3.5rem;
-    line-height: 2rem;
+    font-size: 3rem;
+    line-height: 2.5rem;
   }
   .homereview p {
     line-height: 1.5em;
@@ -425,22 +484,43 @@ section {
     width: 6px;
     height: 6px;  
   }
-  .container-fluid p, .container-fluid h1, .container-fluid h2, .container-fluid h3 {
-    padding: 0 10%;
+  .container-fluid p,
+  .container-fluid h1,
+  .container-fluid h2,
+  .container-fluid h3 {
+    padding: 0 5%;
   }
   .section-title {
     font-size: 1.5rem;
+  }
+  section {
+    padding: 40px 0;
+  }
+  .container h1, .container-fluid h1 {
+    margin-bottom: 40px;
+  }
+  .h1, h1 {
+    font-size: 1.3rem;
+  }
+  .h2, h2 {
+    font-size: 1.1rem;
+  }
+  .h3, h3 {
+    font-size: 0.8rem;
+  }
+  p {
+    font-size: 0.7rem;
   }
 }
 
 @media only screen and (max-width : 480px) {
   #carousel-container {
-    height: 35%;
+    height: 42%;
   }
 }
 
 @media only screen and (max-width : 320px) {
   #carousel-container {
-    height: 45%;
+    height: 42%;
   }
 }

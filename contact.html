@@ -11,7 +11,7 @@ image:
   datasrcset: 'https://farm4.staticflickr.com/3849/33613974482_b1dd943b42_n.jpg 320w, https://farm4.staticflickr.com/3849/33613974482_b1dd943b42.jpg 500w, https://farm4.staticflickr.com/3849/33613974482_b1dd943b42_z.jpg 640w, https://farm4.staticflickr.com/3849/33613974482_b1dd943b42_c.jpg 800w, https://farm4.staticflickr.com/3849/33613974482_b1dd943b42_b.jpg 1024w, https://farm4.staticflickr.com/3849/33613974482_eefa53436a_h.jpg 1600w, https://farm4.staticflickr.com/3849/33613974482_d2c4e8d587_k.jpg 2048w'
 ---
 
-<div class="container">
+<div class="container" id="contact">
 <section class="row">
   <div class="col-md-12">
     <h1>{{ page.h1 }}</h1>
@@ -22,8 +22,10 @@ image:
 <div class="container" style="margin-bottom: 70px;">
   <div class="row">
     <div class="col-md-6">
-      <p><strong>Getting Married?</strong> Use <a href="http://bit.ly/weddinginquiry" rel="nofollow" target="_blank">this form</a> for wedding inquiries.</p>
-      <p>Or feel free to shoot me a mail on <a href="mailto:click@lovelldsouza.com">click@lovelldsouza.com</a> and I shall get back to you as soon as I can. Or you could just fill in the form on this page. If your inquiry is for photography services, please throw in some details like the <strong>date</strong>, <strong>location</strong>, <strong>type</strong> of function/event/gig, <strong>expectations</strong>, etc so that I could cater to you with a better response.</p>
+      <div id="contact-text">
+        <p><strong>Getting Married?</strong> Use <a href="http://bit.ly/weddinginquiry" rel="nofollow" target="_blank">this form</a> for wedding inquiries.</p>
+        <p>Or feel free to shoot me a mail on <a href="mailto:click@lovelldsouza.com">click@lovelldsouza.com</a> and I shall get back to you as soon as I can. Or you could just fill in the form on this page. If your inquiry is for photography services, please throw in some details like the <strong>date</strong>, <strong>location</strong>, <strong>type</strong> of function/event/gig, <strong>expectations</strong>, etc so that I could cater to you with a better response.</p>
+      </div>
     </div>
     <form id="email-form">
     <div  class="col-md-6" style="border-left:1px dotted lightgray;">
@@ -50,8 +52,8 @@ image:
       <div class="col-md-12 form-group">
         <center>
           <div id="response"></div>
-          <input type="submit" value="Submit" class="btn btn-primary btn-lg" />
-          <input type="reset" value="Reset" class="btn btn-lg" />
+          <input type="submit" value="Submit" class="btn btn-success" />
+          <input type="reset" value="Reset" class="btn" />
         </center>
       </div>
     </div>
