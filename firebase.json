@@ -177,11 +177,6 @@
         "source": "/mariella-conrad-goa/",
         "destination": "/weddings/mariella-conrad-goa/",
         "type": 301
-      },
-      {
-        "source": "source",
-        "destination": "destination",
-        "type": 301
       }
     ]
   }
