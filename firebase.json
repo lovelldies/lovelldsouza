@@ -44,6 +44,11 @@
         "type": 301
       },
       {
+        "source": "/weddings/faq/",
+        "destination": "/faq/",
+        "type": 301
+      },
+      {
         "source": "/tag/*",
         "destination": "/tags/",
         "type": 301
@@ -169,6 +174,11 @@
         "type": 301
       },
       {
+        "source": "/timelapses/",
+        "destination": "https://www.youtube.com/watch?v=lpm-JA75AfQ&list=PLKRZLcIbycHtotdQhYkCRSsHxFzY86IoJ",
+        "type": 302
+      },
+      {
         "source": "/lekha-patanjali-hyderabad/",
         "destination": "/weddings/lekha-patanjali-hyderabad/",
         "type": 301
@@ -177,7 +187,22 @@
         "source": "/mariella-conrad-goa/",
         "destination": "/weddings/mariella-conrad-goa/",
         "type": 301
-      }
+      },
+      {
+        "source": "/roseanne-ashwin-goa/",
+        "destination": "/weddings/roseanne-ashwin-goa/",
+        "type": 301
+      },
+      {
+        "source": "/author/lovell/",
+        "destination": "https://www.lovelldsouza.com/about/",
+        "type": 301
+      },
+      {
+        "source": "/goa/",
+        "destination": "https://www.flickr.com/photos/lovelldies/sets/72157623215805322",
+        "type": 302
+      },
     ]
   }
 }
