@@ -1,0 +1,223 @@
+---
+layout: post
+categories: webdev
+
+title: The Layman’s Guide to Photo Backups
+h1: The Layman’s Guide to Backing-up Photos
+
+image:
+  main: https://farm2.staticflickr.com/1616/24474843035_b51644cae4.jpg
+  datasrcset: 'https://farm2.staticflickr.com/1616/24474843035_b51644cae4_n.jpg 320w, https://farm2.staticflickr.com/1616/24474843035_b51644cae4.jpg 500w, https://farm2.staticflickr.com/1616/24474843035_b51644cae4_z.jpg 640w, https://farm2.staticflickr.com/1616/24474843035_b51644cae4_c.jpg 800w, https://farm2.staticflickr.com/1616/24474843035_b51644cae4_b.jpg 1024w, https://farm2.staticflickr.com/1616/24474843035_663d2025f2_h.jpg 1600w, https://c2.staticflickr.com/2/1616/24474843035_80bfdeeab0_o.jpg 1920w'
+
+excerpt: Never worry about losing your photos again! Here are some easy ways to backup your personal photos based on my own workflow.
+tags: [ Google Photos, Photo Backup, Cloud Storage, Backups, Photos, Flickr, Backup Photos, Android, Photo, Photos ]
+
+date: 2017-08-28T15:00:00+05:30
+---
+<style>
+h2 {
+  margin-top: 70px;
+}
+.post .col-sm-6 {
+  padding: 20px;
+  border: 1px solid red;
+}
+.post img {
+  border: 0;
+}
+.post li {
+  font-size: 0.8rem;
+  line-height: 1.5em;
+}
+.post p {
+    margin: 40px 5%;
+}
+</style>
+
+<div class="container" id="webdev">
+  <section class="row post">
+    <div class="col-lg-12">
+      <h1>{{ page.h1 }}</h1>
+      <p><em>Yes, I know, this post does not really belong in the <strong>Web Development</strong> section.</em></p>
+      <p>Over the past few years, I've had a lot of friends and family members lose all their photographs, videos, and other data, either due to a hard disk crash or a stolen/malfunctioning phone. All which could have easily been avoided by taking advantage of the various cloud backup services out there, most of which are free!</p>
+      <p>Since I keep getting the occasional panic-stricken message, &ldquo;My phone stopped working, how can I access my photos?&rdquo; or &ldquo;My computer is not working, how can I recover my photos/videos&rdquo;, I've decided to make this post. So here it is, based on my personal workflow/setup &ndash; <strong>The layman's guide to photo backups</strong>.</p>
+      <hr/>
+      <p>My wife and I both use Android phones that are linked to our respective Google accounts. Which means all our photos are automatically backed up on our <a href="https://photos.google.com/" rel="nofollow" target="_blank">Google Photos</a> accounts. <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.photos&hl=en" target="_blank" rel="nofollow">Google Photos</a> gives you <strong><a href="https://support.google.com/photos/answer/6220791?hl=en" target="_blank" rel="nofollow">unlimited free storage</a></strong>. So please, for the love of Christ (or whichever mythical creature you believe in), use this!</p>
+      <p>Setting this up is pretty straight forward.</p>
+
+      <div class="row">
+        <div class="col-md-4">
+          {% include image.html
+            loc="https://i.imgur.com/XE6c8Tt.jpg"
+            alt="Google Photos - Sync Settings"
+            class="img-shadow curved-corners"
+            datasrcset="https://i.imgur.com/XE6c8Ttm.jpg 320w, https://i.imgur.com/XE6c8Ttl.jpg 640w, https://i.imgur.com/XE6c8Tth.jpg 1024w" %}
+        </div>
+        <div class="col-md-8">
+          <p>Turn on <strong>Back up &amp; sync</strong> and (if you have multiple Google accounts logged into the phone) choose the account you would like to sync your photos to.</p>
+          <p>Besides the default camera photos, you can choose additional folders to backup by clicking on the <strong>Back up device folders</strong> option and then selecting/de-selecting the ones you would like backed up.</p>
+          <p>Set the <strong>Upload size</strong> to <strong>High Quality</strong>. This lets you upload unlimited number of photos, which do not count towards your Google storage space.</p>
+          <p style="margin-bottom:10px;">According to Google:</p>
+          <ul>
+            <li>Photos are compressed to save space. If a photo is larger than 16MP, it will be resized to 16MP.
+            <li>You can print good quality 16MP photos in sizes up to 24 inches x 16 inches.</li>
+            <li>Videos higher than 1080p will be resized to high-definition 1080p. A video with 1080p or less will look close to the original.</li>
+          </ul>
+          <p style="margin-top:10px;">You can read more about this <a href="https://support.google.com/photos/answer/6220791?hl=en" target="_blank" rel="nofollow">here</a>.</p>
+        </div>
+      </div>
+
+      <p>If you choose <strong>Original Quality</strong>, make sure you are aware of your storage limit first.</p>
+      <p>Turn <strong>Mobile data backup</strong> on, only if you have a good data plan. There is also an option for backing up while <em>roaming</em>. You can turn this on if you wish to. But I suggest you set your backup to sync only when connected to WiFi, and while charging.</p>
+
+      <div class="row">
+        <div class="col-md-4">
+          {% include image.html
+            loc="https://i.imgur.com/0tcyU9z.jpg"
+            alt="Whatsapp - Disable Auto-downloads"
+            class="img-shadow curved-corners"
+            datasrcset="https://i.imgur.com/0tcyU9zm.jpg 320w, https://i.imgur.com/0tcyU9zl.jpg 640w, https://i.imgur.com/0tcyU9zh.jpg 1024w" %}
+        </div>
+        <div class="col-md-8">
+          <p>If you are a <a href="https://play.google.com/store/apps/details?id=com.whatsapp&hl=en" target="_blank" rel="nofollow">Whatsapp</a> user, I'd suggest you disable all auto-downloads (in <strong>Data usage</strong>), and only download images/videos from people you trust or whose content you care about.</p>
+          <p>Once this is done, you can add your Whatsapp media folders to the <strong>Backup up device folders</strong> list in your <strong>Google Photos</strong> app. This will enable auto backups of content that you have downloaded from Whatsapp.</p>
+          <p>With the amount of junk that is being shared on Whatsapp lately, this is probably one way to keep the mess out, and only backup the necessary content.</p>              
+        </div>
+      </div>
+
+      <p>Having done this, I have a second layer of backups done via the <a href="https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.flickr&hl=en" target="_blank" rel="nofollow">Flickr App</a>. For those of you who are not aware, <a href="https://www.flickr.com/photos/lovelldies/albums" target="_blank" rel="nofollow">Flickr</a> gives you <a ref="https://help.yahoo.com/kb/flickr-for-desktop/reasons-upgrade-flickr-sln25499.html" rel="nofollow" target="_blank">1TB of free storage</a>. 1TB is a lot of free space! Even I'm nowhere close to reaching that limit anytime in the near future.</p>
+
+      <div class="row">
+        <div class="col-md-4">
+          {% include image.html
+            loc="https://i.imgur.com/WsoeC7M.jpg"
+            alt="Flickr App - Auto-uploader settings"
+            class="img-shadow curved-corners"
+            datasrcset="https://i.imgur.com/WsoeC7Mm.jpg 320w, https://i.imgur.com/WsoeC7Ml.jpg 640w, https://i.imgur.com/WsoeC7Mh.jpg 1024w" %}
+        </div>
+        <div class="col-md-8">
+          <p>Unfortunately, the official Flickr app only backs up photos and videos from the default <a href="https://help.yahoo.com/kb/SLN24169.html" target="_blank" rel="nofollow">photo/video folders</a>, and does not allow you to choose which folder(s) you can backup, But it does the job.</p>
+          <p>I use Flickr as a duplicate copy of backups for my personal photos, just in case Google Photos start acting up. Although I think the chances of that happening is almost zero.</p>
+          <p>You can then <a href="https://www.flickr.com/cameraroll" target="_blank" rel="nofollow">organize your photos</a> via the Flickr website, if you wish.</p>
+          <p>I also use the <a href="https://www.flickr.com/tools/" target="_blank" rel="nofollow">Desktop Uploader</a> by Flickr, but I’m going to skip this part as it is only available to to Pro users.</p>
+        </div>
+      </div>
+
+      <p>And lastly. Backing up your content on a desktop is really easy and straightforward using the <strong><a href="https://photos.google.com/apps" target="_blank" rel="nofollow">Google Backup and Sync</a></strong> desktop application (formerly <strong>Google Drive</strong> for desktop).</p>
+
+      {% include image.html
+        loc="https://i.imgur.com/iBsK6oD.jpg"
+        alt="Google Backup &amp; Sync"
+        class="img-shadow curved-corners"
+        datasrcset="https://i.imgur.com/iBsK6oDm.jpg 320w, https://i.imgur.com/iBsK6oDl.jpg 640w, https://i.imgur.com/iBsK6oDh.jpg 1024w" %}
+      
+      <p>Besides syncing your good 'ol Google Drive content, the new Backup and Sync app allows you to choose which folders you can to sync to your Google Photos. I use it to backup select Whatsapp content that I download using <a href="https://web.whatsapp.com/" target="_blank" rel="nofollow">Whatsapp Web</a>, and a few other folders lying on my machines.</p>
+
+      <div class="row">
+        <div class="col-md-8">
+          {% include image.html
+            loc="https://i.imgur.com/9P0diGG.jpg"
+            alt="Google Backup &amp; Sync &ndash; Settings"
+            datasrcset="https://i.imgur.com/9P0diGGm.jpg 320w, https://i.imgur.com/9P0diGGl.jpg 640w, https://i.imgur.com/9P0diGGh.jpg 1024w" %}
+        </div>
+        <div class="col-md-4">
+          <p>I use a desktop to get work done, but at times, I end up using a laptop. Hence if you have multiple machines, you can choose which folders to sync, on the respective machines, and then just sit back and relax.</p>
+        </div>
+      </div>
+
+      <p>Having done this, let's look at four amazing features of Google Photos (my primary backup service), that have impressed me.</p>
+
+      <h2>Face Recognition</h2>
+      <div class="row">
+        <div class="col-md-5">
+          <p>First make sure to turn on the <strong>Face grouping</strong> feature via the <a href="https://photos.google.com/settings" target="_blank" rel="nofollow">settings page</a>.</p>
+        </div>
+        <div class="col-md-7">
+          {% include image.html
+            loc="https://i.imgur.com/IyaLHdU.jpg"
+            alt="Facial Recognition - Google Photos"
+            class="img-shadow curved-corners"
+            datasrcset="https://i.imgur.com/IyaLHdUm.jpg 320w, https://i.imgur.com/IyaLHdUl.jpg 640w, https://i.imgur.com/IyaLHdUh.jpg 1024w" %}
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-5">
+          <p>Then head to the <a href="https://photos.google.com/people" target="_blank" rel="nofollow">People</a> section, and tag the folks whose faces you would want recognized.</p>
+        </div>
+        <div class="col-md-7">
+          {% include image.html
+            loc="https://i.imgur.com/J5Htv7I.jpg"
+            alt="People &ndash; Google Photos"
+            class="img-shadow curved-corners"
+            datasrcset="https://i.imgur.com/J5Htv7Im.jpg 320w, https://i.imgur.com/J5Htv7Il.jpg 640w, https://i.imgur.com/J5Htv7Ih.jpg 1024w" %}
+        </div>
+      </div>
+      
+      <p>Which leads me to the next great feature:</p>
+
+      <h2>Search</h2>
+      <p>The beauty of having labelled the people in your photos, is that whenever you search for a certain photo (even if they are not organized in albums or folders), you can just use the search box and find them easily. For example, I can find photos of my wife and nephew, together in Mumbai, by just searching for their names along with a location.</p>
+      
+      {% include image.html
+        loc="https://i.imgur.com/CLn1sbT.jpg"
+        alt="Priya &amp; Jacob &ndash; Google Photos"
+        class="img-shadow curved-corners"
+        datasrcset="https://i.imgur.com/CLn1sbTm.jpg 320w, https://i.imgur.com/CLn1sbTl.jpg 640w, https://i.imgur.com/CLn1sbTh.jpg 1024w" %}
+
+      <br>
+      <div class="row">
+        <div class="col-md-4">
+        {% include image.html
+          loc="https://i.imgur.com/XaPJVQM.jpg"
+          alt="Search - Google Photos"
+          class="img-shadow curved-corners"
+          datasrcset="https://i.imgur.com/XaPJVQMm.jpg 320w, https://i.imgur.com/XaPJVQMl.jpg 640w, https://i.imgur.com/XaPJVQMh.jpg 1024w" %}
+        </div>
+        <div class="col-md-8">
+          <p>And this is just one example. You can also find documents, photos of food, photos of a certain color, places, animals, etc using this great search feature. More info: <a href="https://support.google.com/photos/answer/6128838" target="_blank" rel="nofollow">Find people, things, &amp; places in your photos</a>.</p>
+          <p>Also, having your photos backed up on the cloud means you can always free up your phone’s (or whatever device you use) storage space whenever required. Google Photos even allows you to delete all photos from your phone (once they are backed up on the cloud) with a single click.</p>              
+        </div>
+      </div>
+
+      <h2>Shared Albums</h2>
+      <p>Another cool feature is the <a href="https://support.google.com/photos/answer/6280921?hl=en" target="_blank" rel="nofollow">Shared albums</a>.</p>
+
+      {% include image.html
+        loc="https://i.imgur.com/rqvFAF9.jpg"
+        alt="Shared Album - Google Photos"
+        class="img-shadow curved-corners"
+        datasrcset="https://i.imgur.com/rqvFAF9m.jpg 320w, https://i.imgur.com/rqvFAF9l.jpg 640w, https://i.imgur.com/rqvFAF9h.jpg 1024w" %}
+      
+      <p>Recently, <a href="http://warren.asia/" target="_blank" rel="nofollow">Baba Warrenshwar</a> and I (along with our respective wives) took the <a href="https://happyfeet.us/on-the-road/all-aboard-the-tejas-express" target="_blank" rel="nofollow">Tejas Express</a> from Goa to Mumbai. Along the way, all four of us clicked photos on our respective phones, at various stages of the journey. Thanks to the shared albums feature, we could easily share a selected set of photos with each other, via a shared private album.</p>
+
+      <p>And finally:</p>
+      
+      <h2>Sharing Your Library</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p>You can now share a part of, or even your entire photo library, with your partner, or anyone you wish to share it with. Sharing can be restricted to a few photos, by face, or date, more about which you can <a href="https://support.google.com/photos/answer/7378858" rel="nofollow" target="_blank">read here</a>.</p>
+          <p>My use case is simple. I share my entire library with my wife. This means she has access to all my existing photos, and will also have access to photos that I land up backing-up in the future. This allows my photos to show up in her photo library, thus we don’t need to explicitly share albums with each other.</p>
+        </div>
+        <div class="col-md-6">
+          {% include image.html
+            loc="https://i.imgur.com/vSYDqFy.jpg"
+            alt="Shared Partner - Google Photos"
+            class="img-shadow curved-corners"
+            datasrcset="https://i.imgur.com/vSYDqFym.jpg 320w, https://i.imgur.com/vSYDqFyl.jpg 640w, https://i.imgur.com/vSYDqFyh.jpg 1024w" %}
+        </div>
+      </div>
+
+      <p>These are just a few features that I’ve highlighted. There are a ton of other great features by Google Photos, some of which you can find on their <a href="https://plus.google.com/collection/4Abmh" target="_blank" rel="nofollow">Tips &amp; Tricks collection</a> on <a href="https://plus.google.com/+GooglePhotos" target="_blank" rel="nofollow">Google+</a>.</p>
+      <p>Once you have this backup workflow in place, you don’t have to bother about losing your phone or copying photos when you switch over to a new phone. Having your photos backed up online also means that they are easily accessible across the various devices that you are logged into.</p>      
+      <p>If you have a better workflow in place, please feel free to share it here. Suggestions and feedback are always welcome. I’ll also be making a post on Backup Workflow for Photographers some time soon.</p> 
+    
+      <hr>
+      <small><em>Thanks to <a href="https://www.warrenasia.com/" target="_blank" rel="nofollow">Warren</a> and <a href="https://nikhildev.com/" target="_blank" rel="nofollow">Nikhil Dev</a> for their inputs, and <a href="http://priyaramachandran.com" target="_blank" rel="nofollow">Priya</a>, who proof-read and edited this.</em></small>
+    </div>
+  </section>
+</div>
+<!--
+<a href="" target="_blank" rel="nofollow">
+<strong>
+-->

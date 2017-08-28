@@ -13,6 +13,12 @@
   {% assign data_src = include.loc %}
 {% endif %}
 
+{% if include.class != null %}
+  {% assign class = include.class %}
+{% else %}
+  {% assign class = '' %}
+{% endif %}
+
 {% if jekyll.environment == 'amp' %}
   {% if page.imageratio == 'wide' %}
     {% assign img_ratio = 'width="320" height="180"' %}
@@ -26,7 +32,7 @@
   <small>{{ img_caption }}</small>
 {% else %}
 
-    <img alt="{{ img_alt }}" title="{{ img_alt }}" class="lazyload img-responsive"
+    <img alt="{{ img_alt }}" title="{{ img_alt }}" class="{{ class }} lazyload img-responsive"
          srcset="{{ site.preloadimage }}" data-sizes="auto"
          src="{{ img_path }}"
          data-srcset="{{ data_src }}" />

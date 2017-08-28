@@ -202,7 +202,7 @@
         "source": "/goa/",
         "destination": "https://www.flickr.com/photos/lovelldies/sets/72157623215805322",
         "type": 302
-      },
+      }
     ]
   }
 }
