@@ -1,0 +1,37 @@
+<style>
+#social-block {
+  background-color: #191919;
+  color: white;
+  padding: 40px 5%;
+}
+#social-block .inner li {
+  display: inline-block;
+}
+#social-block .inner .label {
+  font-weight: 400;
+}
+#social-block .inner a {
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+<section id="social-block" class="center">
+  <div class="inner">
+    <p>If you liked what you just read, share it with your friends, family, dentist, parish priest, bookie and CA.</p>
+    <ul class="icons">
+      <li><a title="Tweet this!" target="_blank" href="https://twitter.com/share?text={{ page.title }}&url={{ site.liveurl }}{{ page.url }}&via=lovelldies&related=lovelldies"><i class="icon-twitter"></i><span class="label">Twitter</span></a></li>
+
+      <li><a title="Share on Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u={{ site.liveurl }}{{ page.url }}"><i class="icon-facebook"></i><span class="label">Facebook</span></a></li>
+
+      <li><a title="Share on Whatsapp" target="_blank" href="whatsapp://send?text={{ site.liveurl }}{{ page.url }}" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i><span class="label">Whatsapp</span></a></li>
+
+      <li><a title="Share on Google+" target="_blank" href="https://plus.google.com/share?url={{ site.liveurl }}{{ page.url }}"><i class="icon-google-plus"></i><span class="label">Google+</span></a></li>
+
+      <li><a title="Pin this!" target="_blank" href="https://pinterest.com/pin/create/button/?url={{ site.liveurl }}{{ page.url }}&description={{ page.title }}"><i class="icon-pinterest"></i><span class="label">Pinterest</span></a></li>
+
+      <li><a title="Reddit!" target="_blank" href="https://www.reddit.com/submit?url={{ site.liveurl }}{{ page.url }}&title={{ page.title }}"><i class="icon-reddit"></i><span class="label">Reddit</span></a></li>
+
+      <li><a title="Post on LinkedIn" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.liveurl }}{{ page.url }}&title={{ page.title }}&summary={{ page.excerpt }}&source={{ site.liveurl }}"><i class="icon-linkedin"></i><span class="label">LinkedIn</span></a></li>
+    </ul>
+  </div>
+</section>

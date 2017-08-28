@@ -5,6 +5,7 @@ image: https://farm1.staticflickr.com/598/32762787495_c0bff8968d_h.jpg
 baseurl: ""
 #url: https://api-project-496539557864.firebaseapp.com/
 url: https://www.lovelldsouza.com
+liveurl: https://www.lovelldsouza.com
 twitter_username: lovelldies
 github_username:  lovelldies
 permalink: /:categories/:title/
