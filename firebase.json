@@ -202,6 +202,11 @@
         "source": "/goa/",
         "destination": "https://www.flickr.com/photos/lovelldies/sets/72157623215805322",
         "type": 302
+      },
+      {
+        "source": "/resumepdf",
+        "destination": "https://drive.google.com/file/d/1EeF1aaENKZIV4b1VNxPvucPhc2TFFTwg/view?usp=sharing",
+        "type": 302
       }
     ]
   }
